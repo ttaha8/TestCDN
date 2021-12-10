@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Cool Tools!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <link rel="stylesheet" href="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\Style\index.css">
+  
+  <script defer src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\js\renderExtract.js"></script>
+  <script defer src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\js\renderLegal.js"></script>
+  <script defer src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\js\renderMetadata.js"></script>
+  <script defer src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\js\renderGW.js"></script>
+</head>
+
+<body>
+  <P style="font-size: 3; color: rgb(194, 194, 194);">Version 0.6</P>
+  <img src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\Style\Logo-Compliance.png">
+
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'compliance')">Compliance</button>
+    <button class="tablinks" onclick="openTab(event, 'Legal')">Xliff</button>
+    <button class="tablinks" onclick="openTab(event, 'metadata')">Metadata</button>
+    <button class="tablinks" onclick="openTab(event, 'gw-xliff')">GW-Xliff</button>
+  </div>
+
+  <!-- Tab 1 content -->
+  <div id="compliance" class="tabcontent">
+    <br>
+    <p>Create a file per language with keywords.</p>
+    <br>
+    <div id="holder-otp" class="dragndrop">
+      Drag your Termite Extract here
+    </div>
+    <br>
+    <form>
+      <label for="action">CMS Export:</label>
+      <select name="action" id="CMS-action-selection" onchange="assignCMS()">
+        <option value="hal">HAL</option>
+        <option value="eagle">EAgle</option>
+      </select>
+      <br><br>
+      <label for="action">Platform:</label>
+      <select name="action" id="convert-action-selection" onchange="assignPlatform()">
+        <option value="gen4">Gen 4</option>
+        <option value="gen5">Gen 5</option>
+        <option value="nx">Switch</option>
+        <option value="stadia">Stadia</option>
+      </select>
+      <br>
+      <br>
+      <div id="convertBtn-otp" class="btn ripple blue">Convert</div>
+      <p id="status"></p>
+      <p id="error"></p>
+    </form>
+    <br>
+    <div id="progressBar">
+      <div></div>
+    </div>
+  </div>
+  <!-- Tab 2 content -->
+  <div id="Legal" class="tabcontent">
+    <br>
+    <p>Creates a Excel file with keywords.</p>
+    <br>
+    <div id="holder-legal" class="dragndrop">
+      Drag your Xliff file here
+    </div>
+    <br>
+    <form>
+      <label for="action">Keywords Set:</label>
+      <select name="action" id="convertXliff-action-selection" onchange="assignKeywords()">
+        <option value="legal">Legal</option>
+      </select>
+      <br>
+      <br>
+      <div id="convertBtn-legal" class="btn ripple blue">Convert</div>
+    </form>
+    <br>
+  </div>
+  <!-- Tab 3 content -->
+  <div id="metadata" class="tabcontent">
+    <br>
+    <p>Creates a Excel file with keywords.</p>
+    <br>
+    <div id="holderMetadata" class="dragndrop">
+      Drag your Metadata review file here
+    </div>
+    <br>
+    <form>
+      <label for="action">Keywords Set:</label>
+      <select name="action" id="convertMetadata-action-selection" onchange="assignMetadataKeywords()">
+        <option value="metadata">The Sims 4</option>
+      </select>
+      <br>
+      <br>
+      <div id="convertBtn-metadata" class="btn ripple blue">Convert</div>
+    </form>
+    <br>
+  </div>
+   <!-- Tab 3 content -->
+   <div id="gw-xliff" class="tabcontent">
+    <br>
+    <p>Fills Xliff Files (GW) with translation from OTP</p>
+    <br>
+    <lable>Xliff:</lable>
+    <div id="gw-xliff-holder" class="dragndrop">Drag your Xliff file here</div>
+    <lable>OTP:</lable>
+    <div id="gw-otp-holder" class="dragndrop">Drag your OTP file here</div>
+	<div id="gw-btn" class="btn ripple blue">Convert</div>
+  </div>
+ 
+
+
+
+  <script src="\\mad-fs1\IDS\LT\CS\Tool Files\TEST ENV\js\renderUI.js"></script>
+</body>
+
+</html>
